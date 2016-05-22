@@ -1,0 +1,376 @@
+<?PHP  header("Content-Type: text/html; charset=windows-1251");
+session_start();
+?>
+<!DOCTYPE html>
+<html>
+
+<head>
+		<title>Distud|Home</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700italic,700,900,900italic' rel='stylesheet' type='text/css'>
+		<!-- js -->
+		<script src="js/jquery.min.js"></script>
+		<!-- //js -->
+		<!-- for-mobile-apps -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+		<meta name="keywords" content="Galaxy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+		Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+				function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<!-- //for-mobile-apps -->
+		<!-- start-smoth-scrolling -->
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+<!-- start-smoth-scrolling -->
+</head>
+	
+<body>
+<!-- header -->
+	<div class="header">
+	<div class="container">
+		<div class="header-part">
+			<div class="head-logo">
+				<a href="index.html"><img src="http://x-lines.ru/letters/i/cyrillicscript/0138/5fe0e7/30/0/etwzg7dicoz8r7e.png" alt=" "></a>
+			</div>
+			<div class="top-nav">
+				<span class="menu"><img src="images/menu.png" alt="" /></span>
+					<ul class="nav1">
+						<li><a href="#home" class="scroll">Главная</a></li>
+						<li><a href="#about" class="scroll">О проекте</a></li>
+						<li><a href="#team" class="scroll">Разработчики</a></li>
+						<!--<li><a href="#price" class="scroll">Фотоальбом</a></li>-->
+						<li><a href="#blog" class="scroll"> Обратная связь</a></li>
+						<li><a href="/regist/login.php"> Войти</a></li>
+					</ul>
+					<script> 
+							   $( "span.menu" ).click(function() {
+								 $( "ul.nav1" ).slideToggle( 300, function() {
+								 // Animation complete.
+								  });
+								 });
+							
+					</script>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	</div>
+<!-- //header -->
+<!-- banner -->
+	<div class="banner">
+	<div class="container">
+		<div class="banner-info">
+		<?PHP
+		if($_SESSION['success']==1){
+			echo ('<h2>Привет $_SESSION["user_login"]</h2>
+			<p>Добро пожаловать на сайт!</p>');
+			}else{echo ('<h2>Мы еще не знакомы?</h2>
+			<p>Тогда присоединяйся!</p>');}
+			?>
+			<div class="more">
+			<?php 
+			if($_SESSION['success']!=1){
+				echo '<a href="regist/regist.php">Регистрация</a>'; 
+				}
+					else		{
+						echo '<a href="regist/login.php">Начинаем!</a>'; 
+						}
+unset($_SESSION['success']);						
+			?>
+				
+			</div>
+		</div>
+	</div>
+	</div>
+<!-- //banner -->
+<!-- banner-bottom -->
+	<div class="banner-bottom">
+	<div class="container">
+		<div class="banner-bottom-left">
+			<div class="fig">
+				
+			</div>
+			<h3>Web Design</h3>
+			<p>Lorem ipsum dolor sit amet<span> est oben dis</span></p>
+		</div>
+		<div class="banner-bottom-left banner-bottom-mid">
+			<div class="fig1">
+				
+			</div>
+			<h3>Graphic Design</h3>
+			<p>Lorem ipsum dolor sit amet<span> est oben dis</span></p>
+		</div>
+		<div class="banner-bottom-left">
+			<div class="fig2">
+				
+			</div>
+			<h3>Photography</h3>
+			<p>Lorem ipsum dolor sit amet<span> est oben dis</span></p>
+		</div>
+		<div class="clearfix"> </div>
+		<div class="banner-bottom-text">
+			<p>"I Want to make beautiful things,even if nobody cares,
+				<span>as opposed to ugly things.That's my intent."</span></p>
+		</div>
+		<div class="banner-bottom-grids">
+			<div class="banner-bottom-grid">
+				<img src="images/8.jpg" alt=" " />
+				<h3>Cool image</h3>
+				<p>Galaxy Corp.</p>
+			</div>
+			<div class="banner-bottom-grid grid-mid">
+				<img src="images/3.jpg" alt=" " />
+				<h3>Great Picture</h3>
+				<p>Galaxy Corp.</p>
+			</div>
+			<div class="banner-bottom-grid">
+				<img src="images/2.jpg" alt=" " />
+				<h3>Cool image</h3>
+				<p>Galaxy Corp.</p>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	</div>
+<!-- //banner-bottom -->
+<!-- about -->
+	<div id="about" class="team">
+	<div class="container">
+		<h4>About us</h4>
+		<div class="group">
+			<img src="images/h.jpg" alt=" " />
+		</div>
+		<div class="group-text">
+			<h3> Praesent vestibulum molestie lacus</h3>
+			<p>Molestie sollicitudin molestie malesuada. Curabitur aliquet quam id dui posuere dit. 
+					Donec sollicitudin molestie malesuada. Lorem ipsum dolor sit amet, consecteturs.
+					Aliquam dapibus tincidunt metus. Praesent justo dolor, lobortis quis,
+					lobortis dignissim, pulvinar ac, lorem. Lorem ipsum dolor sit amet,
+					consectetuer adipiscing elit. Praesent vestibulum molestie lacus. 
+					Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi.
+					Cum sociis natoque penatibus et magnis dis parturient montes, 
+					nascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi&hellip;</p>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+	</div>
+	<div id="team" class="about">
+	<div class="container">
+		<div class="about-us">
+			<h2>Team</h2>
+			<p>Donec sollicitudin molestie malesuada. Nulla quis lorem ut libero mal suada 
+				<span>feugiat. Curabitur aliquet quamuis lorem</span></p>
+		</div>
+		<div class="about-grids">
+			<div class="about-grid">
+				<img src="images/12.jpg" alt=" " />
+				<div class="about-grid-john">
+					<div class="john">
+						<h4>Mr.John Doe</h4>
+						<p>Creative Director</p>
+					</div>
+					<div class="social-icons">
+						<ul>
+							<li><a href class="facebook"> </a></li>
+							<li><a href class="twitter"> </a></li>
+						</ul>
+					</div>
+					<div class="clearfix"> </div>
+					<p class="para">Donec sollicitudin molestie male
+							suada. Curabitur aliquet quam id dui 
+							posuere blandit. Donec sollicitudin 
+							molestie malesuada.</p>
+					<div class="hello">
+						<a href="#">Say Hello</a>
+					</div>
+				</div>
+			</div>
+			<div class="about-grid about-mid">
+				<img src="images/13.jpg" alt=" " />
+				<div class="about-grid-john">
+					<div class="john">
+						<h4>Mr.John Doe</h4>
+						<p>Creative Director</p>
+					</div>
+					<div class="social-icons">
+						<ul>
+							<li><a href class="facebook"> </a></li>
+							<li><a href class="twitter"> </a></li>
+						</ul>
+					</div>
+					<div class="clearfix"> </div>
+					<p class="para">Donec sollicitudin molestie male
+							suada. Curabitur aliquet quam id dui 
+							posuere blandit. Donec sollicitudin 
+							molestie malesuada.</p>
+					<div class="hello">
+						<a href="#">Say Hello</a>
+					</div>
+				</div>
+			</div>
+			<div class="about-grid">
+				<img src="images/11.jpg" alt=" " />
+				<div class="about-grid-john">
+					<div class="john">
+						<h4>Mr.John Doe</h4>
+						<p>Creative Director</p>
+					</div>
+					<div class="social-icons">
+						<ul>
+							<li><a href class="facebook"> </a></li>
+							<li><a href class="twitter"> </a></li>
+						</ul>
+					</div>
+					<div class="clearfix"> </div>
+					<p class="para">Donec sollicitudin molestie male
+							suada. Curabitur aliquet quam id dui 
+							posuere blandit. Donec sollicitudin 
+							molestie malesuada.</p>
+					<div class="hello">
+						<a href="#">Say Hello</a>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	</div>
+<!-- //about -->
+<!-- pricing -->
+	<div id="price" class="pricing">
+	<div class="container">
+		<div class="price">
+			<h2>Pricing</h2>
+			<p>Donec sollicitudin molestie malesuada. Nulla quis lorem ut libero mal suada 
+				<span>feugiat. Curabitur aliquet quam uis lorem</span></p>
+		</div>
+		<div class="basic">
+			<div class="business">
+				<h2>Basic</h2>
+				<p>Best for small business</p>
+			</div>
+			<div class="value">
+				<p>19,99$</p>
+			</div>
+			<ul>
+				<li><span>50</span> Projects</li>
+				<li><span>20</span> Files</li>
+				<li><span>Full</span> Support</li>
+				<li class="gd"><span>24h</span> Ready</li>
+			</ul>
+			<div class="buy-me">
+				<a href="#">Buy Me</a>
+			</div>
+		</div>
+		<div class="basic basic-mid">
+			<div class="business">
+				<h2>Premium</h2>
+				<p>Best for medium business</p>
+			</div>
+			<div class="value">
+				<p>49,99$</p>
+			</div>
+			<ul>
+				<li><span>50</span> Projects</li>
+				<li><span>20</span> Files</li>
+				<li><span>Full</span> Support</li>
+				<li class="gd"><span>24h</span> Ready</li>
+			</ul>
+			<div class="buy-me">
+				<a href="#">Buy Me</a>
+			</div>
+		</div>
+		<div class="basic">
+			<div class="business">
+				<h2>Deluxe</h2>
+				<p>Best for big business</p>
+			</div>
+			<div class="value">
+				<p>99,99$</p>
+			</div>
+			<ul>
+				<li><span>50</span> Projects</li>
+				<li><span>20</span> Files</li>
+				<li><span>Full</span> Support</li>
+				<li class="gd"><span>24h</span> Ready</li>
+			</ul>
+			<div class="buy-me">
+				<a href="#">Buy Me</a>
+			</div>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+	</div>
+<!-- //pricing -->
+<!-- blog -->
+	<div id="blog" class="blog">
+	<div class="container">
+		<h3>FROM THE BLOG</h3>
+		<div class="blog-grids">
+			<div class="blog-grid">
+				<a href="blog.html"><img src="images/4.jpg" alt=" " /></a>
+				<h4><a href="blog.html">Web Design</a></h4>
+				<p>Sed porttitor lactus nibh.Vivamus magna justo.Lacinia eget consecteture sed,convallis att
+					tellus.Curabitur aliquet quam id dui posuere blandit.Cras ultricies ligula sed magna...</p>
+			</div>
+			<div class="blog-grid blog-mid">
+				<a href="blog.html"><img src="images/5.jpg" alt=" " /></a>
+				<h4><a href="blog.html">Web Design</a></h4>
+				<p>Sed porttitor lactus nibh.Vivamus magna justo.Lacinia eget consecteture sed,convallis att
+					tellus.Curabitur aliquet quam id dui posuere blandit.Cras ultricies ligula sed magna...</p>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	</div>
+<!-- //blog -->
+<!-- footer -->
+	<div class="footer">
+	<div class="container">
+		<div class="footer-left">
+			<div class="footer-left-text">
+				<p>Design by<a href="http://w3layouts.com/"> w3layouts</a></p>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<div class="footer-right">
+			<ul>
+				<li><a href="#" class="facebook"> </a></li>
+				<li><a href="#" class="twitter"> </a></li>
+				<li><a href="#" class="dribble"> </a></li>
+			</ul>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+	</div>
+<!-- //footer -->
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+	</script>
+<!-- //here ends scrolling icon -->
+</body>
+</html>
